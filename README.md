@@ -7,4 +7,8 @@ SwiftUI is an innovative, exceptionally simple way to build user interfaces acro
 
 This Git-Repository will record my learning process.
 
+##Requirements
+MacOS Catalina 10.15 Beta
+Xcode 11.0 beta 5
+
   [SwiftUI]: <https://developer.apple.com/xcode/swiftui/>
