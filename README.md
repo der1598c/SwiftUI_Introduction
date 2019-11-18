@@ -7,8 +7,22 @@ SwiftUI is an innovative, exceptionally simple way to build user interfaces acro
 
 This Git-Repository will record my learning process.
 
+[01.Introduction][01.Introduction]
+
+[02.Creating and Combining Views][02.Creating and Combining Views]
+
+[03.Binding List And Navigation][03.Binding List And Navigation]
+
+[04.BuildingGridLayoutInSwiftUI][04.BuildingGridLayoutInSwiftUI]
+
+[07.Using Web API And MVVM Design Pattern][07.Using Web API And MVVM Design Pattern]
+
 ##Requirements
-MacOS Catalina 10.15 Beta
-Xcode 11.0 beta 5
+Xcode 11
 
   [SwiftUI]: <https://developer.apple.com/xcode/swiftui/>
+  [01.Introduction]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/01.Introduction>
+  [02.Creating and Combining Views]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/02.Creating and Combining Views>
+  [03.Binding List And Navigation]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/03.Binding List And Navigation>
+  [04.BuildingGridLayoutInSwiftUI]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/04.BuildingGridLayoutInSwiftUI>
+  [07.Using Web API And MVVM Design Pattern]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/07.Using Web API And MVVM Design Pattern>
