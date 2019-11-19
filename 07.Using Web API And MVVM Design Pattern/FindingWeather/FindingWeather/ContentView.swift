@@ -19,35 +19,47 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(alignment: .center) {
+        NavigationView {
             
-            TextField("Enter city name", text: self.$weatherVM.cityName) {
-                self.weatherVM.search()
-            }.font(.custom("Arial", size: 50))
-                .padding()
-                .fixedSize()
-            
-            ChangeUnitsButton(weatherVM: self.weatherVM, isCelsius: $isCelsius)
-            
-            HStack() {
+            VStack(alignment: .center) {
+                        
+                        TextField("Enter city name", text: self.$weatherVM.cityName) {
+                            self.weatherVM.search()
+                        }.font(.custom("Arial", size: 50))
+                            .padding()
+                            .fixedSize()
+                            .cornerRadius(16)
+                        
+                        HStack() {
+                            
+                            Text(self.weatherVM.temperature != "" ? self.weatherVM.temperature : !self.isCelsius ? "0ºF" : "0ºC")
+                                .font(.custom("Arial", size: 50))
+                                .foregroundColor(Color.white)
+            //                    .offset(y: 100)
+                                .padding()
+                                .background(!self.isCelsius ? Color.blue : Color.orange)
+                                .cornerRadius(16)
+                            
+                            Text(self.weatherVM.humidity != "" ? self.weatherVM.humidity : "0%")
+                                .font(.custom("Arial", size: 50))
+                                .foregroundColor(Color.white)
+            //                    .offset(y: 100)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(16)
+                            
+                        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 120)
+                        
+                        ChangeUnitsButton(weatherVM: self.weatherVM, isCelsius: $isCelsius)
+                        .padding()
+                        .scaledToFit()
+                        
+                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                        .background(Color.green)
+                        .edgesIgnoringSafeArea(.all)
                 
-//                self.weatherVM.isCelsius = self.$isCelsius
-                
-                Text(self.isCelsius ? self.weatherVM.temperature : self.weatherVM.temperature)
-                    .font(.custom("Arial", size: 50))
-                    .foregroundColor(Color.white)
-                    .offset(y: 100)
-                    .padding()
-                Text(self.weatherVM.humidity)
-                    .font(.custom("Arial", size: 50))
-                    .foregroundColor(Color.white)
-                    .offset(y: 100)
-                    .padding()
-            }
-            
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .background(Color.green)
-            .edgesIgnoringSafeArea(.all)
+            .navigationBarTitle(Text("Finding Weather"))
+        }
     }
 }
 
@@ -62,8 +74,10 @@ struct ChangeUnitsButton: View {
             self.isCelsius.toggle()
             self.weatherVM.isCelsius = self.isCelsius
         }) {
-            Text("Change units")
+            Text(self.isCelsius ? "Show ºF" : "Show ºC")
         }.padding(12)
+        .background(Color.yellow)
+        .cornerRadius(16)
         
     }
     
