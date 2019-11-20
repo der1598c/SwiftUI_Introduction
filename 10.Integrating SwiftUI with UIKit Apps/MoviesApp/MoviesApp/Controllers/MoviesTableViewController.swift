@@ -20,7 +20,7 @@ class MoviesTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         initView()
-//        populateMovies()
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -42,11 +42,8 @@ class MoviesTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string.last == " " {
-            return false
-        }
         
-        if textField.text!.count > 1 {
+        if textField.text!.count > 2 {
             populateMovies()
         }
         
@@ -80,14 +77,9 @@ class MoviesTableViewController: UITableViewController, UITextFieldDelegate {
     
     private func populateMovies() {
         
-        var keyWord = "batman"
-        if self.filmName_TF.text != "" {
-            keyWord = self.filmName_TF.text!
-        }
+        let keyWord = self.filmName_TF.text
         
-        let url = "http://www.omdbapi.com/?s=\(keyWord)&apikey=564727fa"
-        
-        Webservice().loadMovies(url: url) { movies in
+        Webservice().loadMovies(keyWord: keyWord!) { movies in
             
             if let movies = movies {
                 self.movies = movies

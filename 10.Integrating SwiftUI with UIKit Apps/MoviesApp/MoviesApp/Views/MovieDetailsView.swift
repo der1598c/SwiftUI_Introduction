@@ -17,7 +17,7 @@ struct MovieDetailsView: View {
     var body: some View {
         ZStack() {
             
-            Color.gray
+            Color.black
                 .edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .center) {

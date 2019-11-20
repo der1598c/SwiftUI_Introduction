@@ -10,9 +10,14 @@ import Foundation
 
 class Webservice {
     
-    func loadMovies(url: String, completion: @escaping ([Movie]?) -> ()) {
+    @UrlEncode
+    var keyWord: String
+    
+    func loadMovies(keyWord: String, completion: @escaping ([Movie]?) -> ()) {
         
-        guard let url = URL(string: url) else {
+        self.keyWord = keyWord
+        
+        guard let url = URL(string: "http://www.omdbapi.com/?s=\(self.keyWord)&apikey=564727fa") else {
             fatalError("URL is incorrect")
         }
         
@@ -34,6 +39,22 @@ class Webservice {
             
         }.resume()
         
+    }
+    
+}
+
+@propertyWrapper
+class UrlEncode {
+    
+    private(set) var value: String = ""
+    
+    var wrappedValue: String {
+        get { value }
+        set {
+            if let url = newValue.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+                self.value = url
+            }
+        }
     }
     
 }
