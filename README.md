@@ -13,7 +13,7 @@ This Git-Repository will record my learning process.
 
 [03.Binding List And Navigation][03.Binding List And Navigation]
 
-[04.BuildingGridLayoutInSwiftUI][04.BuildingGridLayoutInSwiftUI]
+[04.Building Grid Layout In SwiftUI][04.Building Grid Layout In SwiftUI]
 
 [07.Using Web API And MVVM Design Pattern][07.Using Web API And MVVM Design Pattern]
 
@@ -23,6 +23,8 @@ This Git-Repository will record my learning process.
 
 [13.Property Wrappers][13.Property Wrappers]
 
+[20.SwiftUI Animation][20.SwiftUI Animation]
+
 ##Requirements
 Xcode 11
 
@@ -30,8 +32,9 @@ Xcode 11
   [01.Introduction]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/01.Introduction>
   [02.Creating and Combining Views]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/02.Creating and Combining Views>
   [03.Binding List And Navigation]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/03.Binding List And Navigation>
-  [04.BuildingGridLayoutInSwiftUI]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/04.BuildingGridLayoutInSwiftUI>
+  [04.Building Grid Layout In SwiftUI]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/04.Building Grid Layout In SwiftUI>
   [07.Using Web API And MVVM Design Pattern]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/07.Using Web API And MVVM Design Pattern>
   [10.Integrating SwiftUI with UIKit Apps]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/10.Integrating SwiftUI with UIKit Apps>
   [12.Implementing Gestures]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/12.Implementing Gestures>
   [13.Property Wrappers]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/13.Property Wrappers>
+  [20.SwiftUI Animation]: <https://github.com/der1598c/SwiftUI_Introduction/tree/master/20.SwiftUI Animation>
